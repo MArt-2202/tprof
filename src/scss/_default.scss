@@ -134,6 +134,91 @@ h3 {
 	}
 }
 
+.contacts-wrapper {
+	>div {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.phones {
+	a {
+		display: inline-block;
+		font-size: fsz(26, 12);
+		font-weight: 900;
+		line-height: 1;
+		color: $c1;
+
+		&:hover {
+			text-decoration: none;
+			color: $c3;
+		}
+	}
+}
+
+.social {
+
+	li,
+	a,
+	svg {
+		display: inline-block;
+	}
+
+	li {
+		vertical-align: middle;
+
+		&:not(:last-child) {
+			margin-right: 11px;
+		}
+	}
+
+	a {
+		color: $c1;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	svg {
+		fill: currentColor;
+		@include trs-all;
+	}
+}
+
+.social__telegram {
+	svg {
+		width: 17px;
+		height: 15px;
+	}
+
+	&:hover {
+		color: $c5;
+	}
+}
+
+.social__viber {
+	svg {
+		width: 15px;
+		height: 16px;
+	}
+
+	&:hover {
+		color: $c6;
+	}
+}
+
+.social__email {
+	svg {
+		width: 17px;
+		height: 11px;
+	}
+
+	&:hover {
+		color: $c8;
+	}
+}
+
 ul,
 ol,
 blockquote,
@@ -141,8 +226,8 @@ blockquote,
 	margin-bottom: 25px;
 }
 
-ul:not(.header-nav__list, .header__phones),
-ol:not(.header-nav__list, .header__phones) {
+ul:not(.list-style-1, .phones, .social),
+ol:not(.list-style-1, .phones, .social) {
 	li {
 		position: relative;
 		padding-left: 24px;
@@ -158,7 +243,7 @@ ol:not(.header-nav__list, .header__phones) {
 	}
 }
 
-ul:not(.header-nav__list, .header__phones) {
+ul:not(.list-style-1, .phones, .social) {
 	li {
 		&:before {
 			content: '';
@@ -172,7 +257,7 @@ ul:not(.header-nav__list, .header__phones) {
 	}
 }
 
-ol:not(.header-nav__list, .header__phones) {
+ol:not(.list-style-1, .phones, .social) {
 	counter-reset: num;
 
 	li {
