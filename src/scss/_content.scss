@@ -1,5 +1,55 @@
 /*
 =================================
-
+	BLOG
 =================================
 */
+.blog {
+	h2 {
+		text-align: center;
+	}
+}
+
+.blog__list {
+
+	a,
+	strong,
+	span {
+		display: block;
+	}
+
+	a {
+		height: 100%;
+		color: $cb;
+
+		&:hover {
+			text-decoration: none;
+
+			strong {
+				color: $c3;
+			}
+		}
+	}
+
+	.list-img {
+		padding-top: 66.11%;
+
+		&+div {
+			padding: 18px mp(25, 337) 0 mp(25, 337);
+		}
+	}
+
+	strong {
+		font-size: fsz(20, 12);
+		font-weight: 900;
+		line-height: 1.2;
+		@include trs-all;
+
+		&+span {
+			margin-top: 16px;
+			font-size: fsz(10, 12);
+			font-weight: 300;
+			line-height: 1;
+		}
+	}
+
+}
