@@ -1,5 +1,17 @@
+.list-1,
+.list-2,
 .list-4 {
 	display: grid;
+}
+
+.list-1 {
+	grid-template-columns: repeat(4, 1fr);
+	gap: 76px 24px;
+}
+
+.list-2 {
+	grid-template-columns: repeat(4, 1fr);
+	gap: 62px 24px;
 }
 
 .list-4 {
