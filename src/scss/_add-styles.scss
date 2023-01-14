@@ -87,7 +87,7 @@
 }
 
 .style-1 {
-	margin-bottom: 85px;
+	margin-bottom: 94px;
 }
 
 .style-2 {
@@ -98,6 +98,31 @@
 @media (max-width: 768px) {
 	.style-1 {
 		margin-bottom: 70px;
+	}
+}
+
+.slider-btn {
+	position: relative;
+	width: 23px;
+	height: 23px;
+	background-color: $c7;
+	@include trs-all;
+	cursor: pointer;
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 7px;
+		height: 12px;
+		fill: currentColor;
+	}
+
+	&:hover {
+		color: $c1;
+		background-color: $cb;
+		;
 	}
 }
 
