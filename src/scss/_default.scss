@@ -134,6 +134,14 @@ h3 {
 	}
 }
 
+.logo-company {
+	display: inline-block;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 .contacts-wrapper {
 	>div {
 		display: inline-block;
