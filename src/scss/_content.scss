@@ -1,5 +1,49 @@
 /*
 =================================
+	CERTIFICATES
+=================================
+*/
+.certificates-slider__item {
+	display: block;
+
+	.list-img {
+		padding-top: 142.295%;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.certificates__add {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px 15px;
+	margin-bottom: 42px;
+	padding-left: 45px;
+	padding-right: 15px;
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	.slider-btn {
+		&:not(:last-child) {
+			margin-right: 2px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+/*
+=================================
 	BLOG
 =================================
 */
