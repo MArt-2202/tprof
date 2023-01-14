@@ -87,20 +87,16 @@
 }
 
 .style-1 {
-	max-width: 560px;
+	margin-bottom: 85px;
 }
 
 .style-2 {
-	margin-bottom: 100px;
-}
-
-.style-3 {
-	max-height: 300px;
+	max-height: 480px;
 	overflow: hidden;
 }
 
 @media (max-width: 768px) {
-	.style-2 {
+	.style-1 {
 		margin-bottom: 70px;
 	}
 }
