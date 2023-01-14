@@ -203,3 +203,27 @@
 		fill: currentColor;
 	}
 }
+
+.list-style-1 {
+
+	li,
+	a {
+		display: inline-block;
+	}
+
+	li {
+		&:not(:last-child) {
+			margin-right: 12px;
+		}
+	}
+
+	a {
+		line-height: 1;
+		color: $c1;
+
+		&:hover {
+			color: $c3;
+			text-decoration: none;
+		}
+	}
+}
