@@ -1,5 +1,114 @@
 /*
 =================================
+	PRODUCTS
+=================================
+*/
+.products {
+	padding-top: 58px;
+	padding-bottom: 107px;
+	background-color: $c4;
+
+	h2 {
+		color: $c1;
+		text-align: center;
+	}
+}
+
+.products-list {
+	a {
+		display: block;
+		height: 100%;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.list-img {
+		padding-top: 60.73%;
+	}
+
+	strong {
+		display: block;
+		font-weight: 900;
+		line-height: 1.2;
+		@include trs;
+	}
+}
+
+.products-list-1 {
+	.list-img {
+		&+strong {
+			margin-top: 16px;
+		}
+	}
+
+	strong {
+		font-size: fsz(14, 12);
+		color: $c1;
+		text-align: center;
+	}
+
+	a {
+		&:hover {
+			strong {
+				color: $c3;
+			}
+		}
+	}
+}
+
+.products-list-2 {
+	a {
+		font-size: 1rem;
+	}
+
+	.list-img {
+		&+strong {
+			margin-top: 8px;
+		}
+	}
+
+	strong,
+	p {
+		padding-left: mp(20, 247);
+		padding-right: mp(20, 247);
+	}
+
+	strong {
+		color: $c3;
+
+		&+p {
+			margin-top: 5px;
+		}
+	}
+
+	p {
+		color: $cb;
+
+		span {
+			display: inline-block;
+			font-size: fsz(16, 12);
+			font-weight: 900;
+			line-height: 1;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	a {
+		&:hover {
+			strong {
+				color: $cb;
+			}
+		}
+	}
+}
+
+/*
+=================================
 	CERTIFICATES
 =================================
 */
