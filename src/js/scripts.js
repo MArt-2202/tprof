@@ -1,6 +1,7 @@
 'use strict';
 
 import debounce from './modules/debounce';
+import sliders from './modules/sliders';
 import blocksStyles from './modules/blocksStyles';
 import blockPosition from './modules/blockPosition';
 import masketInput from './modules/masketInput';
@@ -26,6 +27,7 @@ if (isMobile()) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+	sliders();
 	masketInput();
 	tableWrapper();
 	toggleContent();
