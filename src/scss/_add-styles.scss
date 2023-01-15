@@ -128,12 +128,12 @@
 
 .btn {
 	display: inline-block;
-	padding: 10px;
+	padding: 15px;
+	font-weight: 700;
 	line-height: 1;
 	border: 1px solid transparent;
-	border-radius: 2px;
 	text-align: center;
-	cursor: ponter;
+	cursor: pointer;
 	@include trs-all;
 
 	span {
@@ -172,7 +172,21 @@
 	font-weight: 900;
 }
 
+.btn-style-4 {
+	border-radius: 2px;
+}
+
 .btn-default {
+	color: $c1;
+	border-color: $c1;
+
+	&:hover {
+		color: $cb;
+		background-color: $c1;
+	}
+}
+
+.btn-primary {
 	color: $c1;
 	border-color: $cb;
 	background-color: $cb;
