@@ -5,6 +5,8 @@ import sliders from './modules/sliders';
 import blocksStyles from './modules/blocksStyles';
 import blockPosition from './modules/blockPosition';
 import masketInput from './modules/masketInput';
+import tooltip from './modules/tooltip';
+import selectStyle from './modules/selectStyle';
 import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 
@@ -29,13 +31,47 @@ if (isMobile()) {
 document.addEventListener('DOMContentLoaded', () => {
 	sliders();
 	masketInput();
+	selectStyle();
+	tooltip({
+		wrapper: 'data-tooltip',
+		tag: 'span',
+		tooltipButton: 'svg',
+		addClass: 'visible',
+		showEvent: 'mouseenter',
+		hideEvent: 'mouseleave',
+	});
 	tableWrapper();
 	toggleContent();
+
+	if (document.querySelector('#add-new-profile')) {
+		document.querySelector('#add-new-profile').addEventListener('click', () => {
+			if (document.querySelector('.order-form__content.dn')) {
+				document.querySelector('.order-form__content.dn').classList.remove('dn');
+
+				tooltip({
+					wrapper: 'data-tooltip',
+					tag: 'span',
+					tooltipButton: 'svg',
+					addClass: 'visible',
+					showEvent: 'mouseenter',
+					hideEvent: 'mouseleave',
+				});
+			}
+		});
+	}
 }); // END READY
 
 window.addEventListener('resize', () => {
 	debounce(function () {
 		blockPosition();
+		tooltip({
+			wrapper: 'data-tooltip',
+			tag: 'span',
+			tooltipButton: 'svg',
+			addClass: 'visible',
+			showEvent: 'mouseenter',
+			hideEvent: 'mouseleave',
+		});
 	}, 200);
 });
 
