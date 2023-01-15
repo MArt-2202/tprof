@@ -128,39 +128,54 @@
 
 .btn {
 	display: inline-block;
-	padding: 13px 10px;
-	font-size: fsz(12, 15);
+	padding: 10px;
 	line-height: 1;
 	border: 1px solid transparent;
-	border-radius: 5px;
+	border-radius: 2px;
 	text-align: center;
+	cursor: ponter;
+	@include trs-all;
+
+	span {
+		position: relative;
+		display: inline-block;
+		text-align: left;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			fill: currentColor;
+		}
+	}
 
 	&:hover {
 		text-decoration: none;
 	}
 }
 
-@media (max-width: 576px) {
-	.btn {
-		font-size: 1rem;
-
-		&:not(.btn-style-1) {
-			padding-top: 12px;
-			padding-bottom: 12px;
-		}
-	}
-}
 
 .btn-style-1 {
-	height: 40px;
-	line-height: 40px;
+	height: 60px;
+	line-height: 60px;
 	padding-top: 0;
 	padding-bottom: 0;
 }
 
+.btn-style-2 {
+	font-size: fsz(10, 12);
+	font-weight: 700;
+}
+
+.btn-style-3 {
+	font-weight: 900;
+}
+
 .btn-default {
 	color: $c1;
-	border-color: $c1;
+	border-color: $cb;
+	background-color: $cb;
 
 	&:hover {
 		background-color: $c3;
@@ -169,47 +184,14 @@
 }
 
 .btn-info {
-	color: $c7;
-	background-color: $c1;
-	border-color: $c1;
+	color: $cb;
+	background-color: $c8;
+	border-color: $c8;
 
 	&:hover {
 		color: $c1;
-		background-color: $c3;
-		border-color: $c3;
-	}
-}
-
-.btn-info-2 {
-	color: $c4;
-	background-color: $c1;
-	border-color: $c1;
-
-	&:hover {
-		color: $c1;
-		background-color: $c4;
-		border-color: $c1;
-	}
-}
-
-.btn-light {
-	color: $c1;
-	background-color: transparent;
-	border-color: transparent;
-
-	&:hover {
-		border-color: $c1;
-	}
-}
-
-.btn-success {
-	color: $c1;
-	background-color: $c3;
-	border-color: $c3;
-
-	&:hover {
-		background-color: $c12;
-		border-color: $c12;
+		background-color: $cb;
+		border-color: $cb;
 	}
 }
 
