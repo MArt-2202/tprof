@@ -19,10 +19,10 @@ export default function blockStyles() {
 		const logo = document.querySelector('.logo-company'),
 			lang = document.querySelector('.lang');
 
-		lang.style.left = `${logo.offsetLeft - lang.offsetWidth}px`;
-
 		if (document.querySelector('.inner')) {
+			lang.style.left = `${logo.offsetLeft - lang.offsetWidth - 25}px`;
 			lang.style.top = '455px';
+			lang.classList.add('lang-style-1');
 		}
 		if (
 			document.querySelector('.index') &&
@@ -30,7 +30,9 @@ export default function blockStyles() {
 		) {
 			const btn = document.querySelector('.top-section .scroll-to-anchor');
 
+			lang.style.left = `${logo.offsetLeft - lang.offsetWidth}px`;
 			lang.style.top = `${btn.offsetTop}px`;
+			lang.classList.remove('lang-style-1');
 		}
 		lang.style.opacity = 1;
 	}
