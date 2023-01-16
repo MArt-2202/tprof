@@ -141,6 +141,71 @@
 
 /*
 =================================
+	ABOUT
+=================================
+*/
+.about {
+	position: relative;
+
+	h2 {
+		margin-bottom: 2px;
+
+		span {
+			position: relative;
+			display: inline-block;
+
+			svg {
+				position: absolute;
+				top: 7px;
+				left: -15px;
+				width: 45px;
+				height: 44px;
+				fill: currentColor;
+			}
+		}
+	}
+}
+
+.about__img {
+	position: absolute;
+	top: calc(50% + 10px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.about h2 span,
+.about__content>div:first-child {
+	padding-left: 45px;
+}
+
+.about__content {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 70px mp(70, 1060);
+
+	&+.about__content {
+		padding-top: 65px;
+	}
+
+	ul {
+		margin-left: -20px;
+	}
+
+	.video-wrapper,
+	p:last-child,
+	ul:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.about__content-style-1 {
+	align-items: center;
+}
+
+/*
+=================================
 	PRODUCTS
 =================================
 */
