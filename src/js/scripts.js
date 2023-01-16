@@ -9,6 +9,7 @@ import tooltip from './modules/tooltip';
 import selectStyle from './modules/selectStyle';
 import scrollToAnchor from './modules/scrollToAnchor';
 import scrollAnimateNodes from './modules/scrollAnimateNodes';
+import videoLazyLoad from './modules/videoLazyLoad';
 import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		node: '.top-section__list li',
 		animatedClass: 'slideInLeft',
 	});
+	videoLazyLoad();
 	tableWrapper();
 	toggleContent();
 
