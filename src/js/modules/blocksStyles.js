@@ -14,4 +14,24 @@ export default function blockStyles() {
 			}
 		});
 	}
+
+	if (document.querySelector('.logo-company') && document.querySelector('.lang')) {
+		const logo = document.querySelector('.logo-company'),
+			lang = document.querySelector('.lang');
+
+		lang.style.left = `${logo.offsetLeft - lang.offsetWidth}px`;
+
+		if (document.querySelector('.inner')) {
+			lang.style.top = '455px';
+		}
+		if (
+			document.querySelector('.index') &&
+			document.querySelector('.top-section .scroll-to-anchor')
+		) {
+			const btn = document.querySelector('.top-section .scroll-to-anchor');
+
+			lang.style.top = `${btn.offsetTop}px`;
+		}
+		lang.style.opacity = 1;
+	}
 }
