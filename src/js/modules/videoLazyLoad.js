@@ -22,7 +22,7 @@ export default function videoLazyLoad() {
 						entry.target.insertAdjacentHTML(
 							'beforeend',
 							`
-								<video muted playsinline poster="${entry.target.dataset.poster}">
+								<video controls muted playsinline poster="${entry.target.dataset.poster}">
 									<source type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' src="${entry.target.dataset.video}">
 								</video>
 							`
@@ -38,7 +38,7 @@ export default function videoLazyLoad() {
 						entry.target.insertAdjacentHTML(
 							'beforeend',
 							`
-								<video muted playsinline>
+								<video controls muted playsinline>
 									<source type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' src="${entry.target.dataset.video}">
 								</video>
 							`
