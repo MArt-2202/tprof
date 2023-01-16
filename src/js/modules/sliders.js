@@ -32,4 +32,27 @@ export default function sliders() {
 			},
 		});
 	}
+
+	if (
+		document.querySelector('.product-details-slider') &&
+		document.querySelector('.product-details-slider .swiper-wrapper').children.length
+	) {
+		new Swiper('.product-details-slider', {
+			modules: [Navigation],
+			on: {
+				init() {
+					if (document.querySelector('.product-details-slider-wrapper')) {
+						document
+							.querySelector('.product-details-slider-wrapper')
+							.classList.remove('style-2');
+					}
+				},
+			},
+			loop: true,
+			navigation: {
+				prevEl: '.product-details-slider__btn--prev',
+				nextEl: '.product-details-slider__btn--next',
+			},
+		});
+	}
 }
