@@ -15,8 +15,8 @@ export default function blockStyles() {
 		});
 	}
 
-	if (document.querySelector('.logo-company') && document.querySelector('.lang')) {
-		const logo = document.querySelector('.logo-company'),
+	if (document.querySelector('header .container') && document.querySelector('.lang')) {
+		const logo = document.querySelector('header .container'),
 			lang = document.querySelector('.lang');
 
 		if (document.querySelector('.inner')) {
@@ -35,5 +35,28 @@ export default function blockStyles() {
 			lang.classList.remove('lang-style-1');
 		}
 		lang.style.opacity = 1;
+	}
+
+	if (
+		document.querySelector('.navigation') &&
+		document.querySelector('.breadcrumbs') &&
+		document.querySelector('.breadcrumbs + h1')
+	) {
+		const nav = document.querySelector('.navigation'),
+			breadcrumbs = document.querySelector('.breadcrumbs'),
+			title = document.querySelector('.breadcrumbs + h1');
+
+		if (window.matchMedia('(min-width: 1091px)').matches) {
+			breadcrumbs.style.marginLeft = `${nav.offsetLeft}px`;
+			breadcrumbs.style.opacity = 1;
+			title.style.marginLeft = `${nav.offsetLeft}px`;
+			title.style.opacity = 1;
+		}
+		if (window.matchMedia('(max-width: 1090px)').matches) {
+			breadcrumbs.style.marginLeft = '';
+			breadcrumbs.style.opacity = '';
+			title.style.marginLeft = '';
+			title.style.opacity = '';
+		}
 	}
 }
