@@ -5,6 +5,7 @@
 }
 
 body {
+	position: relative;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 }
@@ -237,7 +238,7 @@ blockquote,
 	margin-bottom: 35px;
 }
 
-ul:not(.list-style-1, .phones, .social) {
+ul:not(.list-style-1, .phones, .social, .lang) {
 	li {
 		position: relative;
 		padding-left: 20px;
@@ -291,6 +292,37 @@ picture {
 strong,
 b {
 	font-weight: 700;
+}
+
+.lang {
+	position: absolute;
+	z-index: 1;
+	background-color: rgba($c2, 0.5);
+	opacity: 0;
+
+	a {
+		display: inline-block;
+		padding: 16px 20px;
+		font-weight: 700;
+		line-height: 1;
+		color: $c1;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $c3;
+			text-decoration: none;
+		}
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -2000px;
+		width: 2000px;
+		height: 100%;
+		background-color: rgba($c2, 0.5);
+	}
 }
 
 .list-img,
