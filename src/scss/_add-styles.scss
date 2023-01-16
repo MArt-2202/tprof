@@ -122,7 +122,22 @@
 	&:hover {
 		color: $c1;
 		background-color: $cb;
-		;
+	}
+}
+
+.slider-btn-style-1 {
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	transform: translateY(-50%);
+}
+
+.slider-btn-style-2 {
+	background-color: transparent;
+
+	&:hover {
+		color: $cb;
+		background-color: $c7;
 	}
 }
 
@@ -176,6 +191,14 @@
 	border-radius: 2px;
 }
 
+.btn-style-5 {
+	text-transform: uppercase;
+}
+
+.btn-style-6 {
+	padding: 6px 9px;
+}
+
 .btn-default {
 	color: $c1;
 	border-color: $c1;
@@ -206,6 +229,17 @@
 		color: $c1;
 		background-color: $cb;
 		border-color: $cb;
+	}
+}
+
+.btn-success {
+	color: $cb;
+	border-color: $cb;
+	background-color: $c1;
+
+	&:hover {
+		color: $c1;
+		background-color: $cb;
 	}
 }
 
