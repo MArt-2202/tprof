@@ -7,6 +7,7 @@ import blockPosition from './modules/blockPosition';
 import masketInput from './modules/masketInput';
 import tooltip from './modules/tooltip';
 import selectStyle from './modules/selectStyle';
+import scrollToAnchor from './modules/scrollToAnchor';
 import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		showEvent: 'mouseenter',
 		hideEvent: 'mouseleave',
 	});
+	scrollToAnchor();
 	tableWrapper();
 	toggleContent();
 
