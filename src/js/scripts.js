@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', () => {
 	debounce(function () {
+		blocksStyles();
 		blockPosition();
 		tooltip({
 			wrapper: 'data-tooltip',
