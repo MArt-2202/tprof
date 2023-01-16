@@ -232,9 +232,13 @@ h3 {
 
 ul,
 ol,
-blockquote,
-.video-wrapper {
+blockquote {
 	margin-bottom: 35px;
+}
+
+.video-wrapper,
+table {
+	margin-bottom: 40px;
 }
 
 ul:not(.list-style-1, .phones, .social, .lang) {
@@ -276,7 +280,6 @@ a {
 
 table {
 	width: 100%;
-	margin-bottom: 40px;
 }
 
 picture,
@@ -368,19 +371,7 @@ video {
 }
 
 .video-wrapper {
-
-	iframe:not(.instagram-media),
-	iframe:not(.facebook),
-	iframe:not([id^='telegram']),
-	video {
-		margin-bottom: 0;
-		border: none;
-	}
-}
-
-.video-wrapper {
 	position: relative;
-	margin-bottom: 25px;
 	padding-top: 56.25%;
 
 	iframe:not(.instagram-media),
