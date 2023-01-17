@@ -317,24 +317,10 @@ b {
 			text-decoration: none;
 		}
 	}
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: -2000px;
-		width: 2000px;
-		height: 100%;
-		background-color: rgba($c2, 0.5);
-	}
 }
 
 .lang-style-1 {
 	background-color: $c4;
-
-	&:before {
-		background-color: $c4;
-	}
 }
 
 .list-img,
