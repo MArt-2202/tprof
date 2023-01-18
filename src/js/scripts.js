@@ -1,7 +1,6 @@
 'use strict';
 
 import debounce from './modules/debounce';
-import sliders from './modules/sliders';
 import blocksStyles from './modules/blocksStyles';
 import blockPosition from './modules/blockPosition';
 import masketInput from './modules/masketInput';
@@ -12,6 +11,7 @@ import scrollAnimateNodes from './modules/scrollAnimateNodes';
 import videoLazyLoad from './modules/videoLazyLoad';
 import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
+import lightbox from './modules/lightbox';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -32,7 +32,6 @@ if (isMobile()) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	sliders();
 	masketInput();
 	selectStyle();
 	tooltip({
@@ -68,6 +67,24 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	}
+	lightbox({
+		container: '#product-lightbox',
+		selector: '.product-details-slider__item',
+		plugins: [lgZoom],
+		speed: 500,
+		zoom: true,
+		download: false,
+		mode: 'lg-fade',
+	});
+	lightbox({
+		container: '#certificates-lightbox',
+		selector: '.certificates-slider__item',
+		plugins: [lgZoom],
+		speed: 500,
+		zoom: true,
+		download: false,
+		mode: 'lg-fade',
+	});
 }); // END READY
 
 window.addEventListener('resize', () => {
