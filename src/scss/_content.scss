@@ -467,7 +467,7 @@
 =================================
 */
 .certificates-slider__item {
-	cursor: pointer;
+	cursor: zoom-in;
 
 	.list-img {
 		padding-top: 142.295%;
@@ -630,10 +630,14 @@
 }
 
 .product-details-slider__item {
-	cursor: pointer;
+	cursor: zoom-in;
 
 	.list-img {
 		padding-top: 60.105%;
+	}
+
+	&:hover {
+		text-decoration: none;
 	}
 }
 
