@@ -77,13 +77,33 @@ header {
 		top: 0;
 		left: 0;
 		width: 100%;
-		background-color: $c4;
+
+		&.header-style {
+			background-color: $c4;
+		}
 
 		.container {
 			padding-top: 15px;
 			padding-bottom: 15px;
 			align-items: center;
 		}
+	}
+
+	.header__bl-1,
+	.toggle-btn {
+		position: relative;
+		z-index: 999;
+	}
+
+	.header__bl-2,
+	.header__bl-3,
+	.contacts-wrapper,
+	.navigation {
+		display: none;
+	}
+
+	.logo-company {
+		width: 113px;
 	}
 
 	.toggle-wrapper,
@@ -107,16 +127,17 @@ header {
 
 	.toggle__content {
 		position: fixed;
-		top: 70px;
+		top: 0;
 		right: 0;
-		width: calc(min(300px, 100%));
+		width: 100%;
 		bottom: 0;
 		z-index: 998;
 		opacity: 0;
 		visibility: hidden;
 		transform: scaleY(0);
 		transform-origin: top;
-		background-color: $c1;
+		background: $c4 url(../img/bg-2.svg) no-repeat 100% 70px;
+		background-size: contain;
 		@include trs-all;
 
 		>div {
@@ -127,16 +148,57 @@ header {
 			justify-content: center;
 			align-items: center;
 			height: 100%;
-			padding: 17px 15px 35px 15px;
+			padding: 70px 15px;
 			text-align: center;
 			overflow-y: auto;
-
 		}
 
 		&.content-visible {
 			opacity: 1;
 			visibility: visible;
 			transform: scaleY(1);
+		}
+
+		.contacts-wrapper,
+		.navigation {
+			display: block;
+		}
+
+		.navigation {
+			li {
+				display: block;
+				margin-right: 0;
+
+				&:not(:last-child) {
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
+			}
+
+			a {
+				font-size: fsz(26, 12);
+				font-weight: 900;
+			}
+
+			&+.contacts-wrapper {
+				margin-top: 20px;
+			}
+		}
+
+		.contacts-wrapper {
+			>div {
+				display: block;
+
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		.phones {
+			a {
+				font-size: fsz(18, 12);
+			}
 		}
 	}
 
@@ -183,7 +245,7 @@ header {
 
 			&:nth-child(2),
 			&:nth-child(3) {
-				background-color: $c15;
+				background-color: $c3;
 			}
 
 			&:first-child {
@@ -200,6 +262,22 @@ header {
 
 			&:nth-child(4) {
 				transform: translateX(-40px);
+			}
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.toggle__content {
+		.navigation {
+			a {
+				font-size: fsz(22, 12);
+			}
+		}
+
+		.phones {
+			a {
+				font-size: fsz(16, 12);
 			}
 		}
 	}
