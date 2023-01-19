@@ -5,6 +5,19 @@ export default function scrollToAnchor() {
 
 			if (link) {
 				e.preventDefault();
+
+				if (document.querySelector('.content-visible')) {
+					const toggleBtn = document.querySelector('.toggle-btn'),
+						toggleContent = document.querySelector('.toggle-wrapper > div'),
+						overlay = document.querySelector('.overlay');
+
+					toggleBtn.classList.remove('toggle-btn-style');
+					toggleContent.classList.remove('content-visible'),
+						overlay.classList.remove('overlay-visible');
+					document.body.style.overflowY = '';
+					document.body.style.paddingRight = '';
+				}
+
 				scrollToTarget(link.hash);
 			}
 		});
