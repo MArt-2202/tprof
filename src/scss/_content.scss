@@ -515,13 +515,6 @@
 	}
 }
 
-
-
-
-
-
-
-
 /*
 =================================
 	BLOG
@@ -558,7 +551,7 @@
 		padding-top: 66.11%;
 
 		&+div {
-			padding: 18px mp(25, 337) 0 mp(25, 337);
+			padding: 18px mp(24, 337) 0 mp(24, 337);
 		}
 	}
 
@@ -573,6 +566,77 @@
 			font-size: fsz(10, 12);
 			font-weight: 300;
 			line-height: 1;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.blog__list {
+		.list-img {
+			&+div {
+				padding: 13px mp(15, 299) 0 mp(15, 299);
+			}
+		}
+
+		strong {
+			font-size: fsz(16, 12);
+
+			+span {
+				margin-top: 12px;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.blog__list {
+		.list-img {
+			&+div {
+				padding-left: mp(15, 285);
+				padding-right: mp(15, 285);
+			}
+		}
+
+		strong {
+			font-size: fsz(16, 12);
+
+			+span {
+				margin-top: 12px;
+			}
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.blog__list {
+		.list-img {
+			&+div {
+				padding-left: mp(15, 178);
+				padding-right: mp(15, 178);
+			}
+		}
+
+		strong {
+			font-size: fsz(14, 12);
+
+			+span {
+				font-size: fsz(8, 12);
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.blog__list {
+		.list-img {
+			&+div {
+				padding-left: mp(15, 138);
+				padding-right: mp(15, 138);
+			}
+		}
+
+		strong {
+			font-size: 1rem;
 		}
 	}
 }
