@@ -17,7 +17,7 @@ header {
 	}
 }
 
-@media (min-width: 1091px) {
+@media (min-width: 1201px) {
 	header {
 		position: relative;
 
@@ -71,7 +71,7 @@ header {
 	}
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 1200px) {
 	header {
 		position: fixed;
 		top: 0;
@@ -97,8 +97,9 @@ header {
 
 	.header__bl-2,
 	.header__bl-3,
-	.contacts-wrapper,
-	.navigation {
+	.header__contacts-wrapper,
+	.navigation,
+	.lang {
 		display: none;
 	}
 
@@ -116,13 +117,6 @@ header {
 
 	.toggle-wrapper {
 		vertical-align: middle;
-
-		.header__nav,
-		.header__phones-wrapper,
-		.header__address {
-			display: block;
-
-		}
 	}
 
 	.toggle__content {
@@ -159,7 +153,8 @@ header {
 			transform: scaleY(1);
 		}
 
-		.contacts-wrapper,
+		.lang,
+		.header__contacts-wrapper,
 		.navigation {
 			display: block;
 		}
@@ -181,11 +176,11 @@ header {
 			}
 
 			&+.contacts-wrapper {
-				margin-top: 20px;
+				margin-top: 35px;
 			}
 		}
 
-		.contacts-wrapper {
+		.header__contacts-wrapper {
 			>div {
 				display: block;
 
