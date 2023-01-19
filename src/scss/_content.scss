@@ -313,6 +313,75 @@
 	}
 }
 
+@media (max-width: 1024px) {
+	.products-list-2 {
+
+		strong,
+		p {
+			padding-left: mp(20, 298);
+			padding-right: mp(20, 298);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.products-list-2 {
+
+		strong,
+		p {
+			padding-left: mp(20, 258);
+			padding-right: mp(20, 258);
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.products-list-2 {
+		a {
+			font-size: fsz(10, 12);
+		}
+
+		p {
+			span {
+				font-size: fsz(14, 12);
+			}
+		}
+
+		strong,
+		p {
+			padding-left: mp(20, 178);
+			padding-right: mp(20, 178);
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.products-list-2 {
+
+		strong,
+		p {
+			padding-left: mp(15, 158);
+			padding-right: mp(15, 158);
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.products-list-2 {
+		p {
+			span {
+				font-size: 1rem;
+			}
+		}
+
+		strong,
+		p {
+			padding-left: mp(15, 138);
+			padding-right: mp(15, 138);
+		}
+	}
+}
+
 /*
 =================================
 	ORDER
