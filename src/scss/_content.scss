@@ -324,6 +324,19 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.products {
+		padding-top: 65px;
+		padding-bottom: 67px;
+	}
+
+	.products-list-1 {
+		strong {
+			font-size: 1rem;
+		}
+	}
+}
+
 @media (max-width: 576px) {
 	.products-list-2 {
 
@@ -336,6 +349,16 @@
 }
 
 @media (max-width: 415px) {
+	.products-list-1 {
+		.list-img+strong {
+			margin-top: 10px;
+		}
+
+		strong {
+			font-size: fsz(10, 12);
+		}
+	}
+
 	.products-list-2 {
 		a {
 			font-size: fsz(10, 12);
