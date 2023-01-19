@@ -468,20 +468,14 @@
 */
 .certificates-slider__item {
 	cursor: zoom-in;
-
-	.list-img {
-		padding-top: 142.295%;
-	}
 }
 
 .certificates__add {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	gap: 20px 15px;
+	align-items: center;
 	margin-bottom: 42px;
-	padding-left: 45px;
-	padding-right: 15px;
+
 
 	h2 {
 		margin-bottom: 0;
@@ -491,6 +485,33 @@
 		&:not(:last-child) {
 			margin-right: 2px;
 		}
+	}
+}
+
+@media (min-width: 416px) {
+	.certificates__add {
+		justify-content: space-between;
+	}
+
+	.certificates-slider__item .list-img {
+		padding-top: 142.295%;
+	}
+}
+
+@media (min-width: 1025px) {
+	.certificates__add {
+		padding-left: 45px;
+		padding-right: 15px;
+	}
+}
+
+@media (max-width: 415px) {
+	.certificates__add {
+		flex-direction: column;
+	}
+
+	.certificates-slider__item .list-img {
+		padding-top: 125%;
 	}
 }
 
