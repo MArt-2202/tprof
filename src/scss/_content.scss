@@ -476,7 +476,7 @@
 .order-form__content {
 	margin-bottom: 38px;
 	padding: 24px;
-	background: $c7;
+	background-color: $c7;
 	border: 1px solid rgba($c8, 0.5);
 }
 
@@ -496,6 +496,13 @@
 
 .order-form__main {
 	flex-grow: 1;
+
+	label {
+		strong {
+			display: block;
+			text-align: right;
+		}
+	}
 }
 
 .order-form__add {
@@ -520,6 +527,7 @@
 .order-form__add-new-profile {
 	span {
 		display: flex;
+		justify-content: center;
 		padding-left: 25px;
 		line-height: 1.2;
 
@@ -527,6 +535,81 @@
 			width: 10px;
 			height: 10px;
 		}
+	}
+}
+
+@media (min-width: 1091px) {
+	.order-form__content {
+		margin-bottom: 38px;
+	}
+}
+
+@media (max-width: 1090px) {
+	.order-form {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media (max-width: 1024px) {
+	.order-form {
+		gap: 38px 0;
+	}
+
+	.order-form__aside {
+		margin-bottom: 0;
+	}
+
+	.order p+.order-form {
+		padding-top: 21px;
+	}
+}
+
+@media (max-width: 640px) {
+	.order-form__aside {
+		width: 100%;
+	}
+}
+
+@media (max-width: 576px) {
+	.order-form__content {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 415px) {
+	.order-form {
+		label {
+			padding-left: 10px;
+			padding-right: 1px;
+		}
+	}
+
+	.order-form__add {
+		label {
+			margin-bottom: 5px;
+		}
+	}
+
+	.order-form__aside label,
+	.order-form__main label strong {
+		text-align: left;
+	}
+}
+
+@media (max-width: 360px) {
+	.order-form__content {
+		padding: 15px;
+	}
+
+	.order-form__add-new-profile {
+		span {
+			display: inline-flex;
+		}
+	}
+
+	.order-form .list-7 p {
+		text-align: center;
 	}
 }
 
