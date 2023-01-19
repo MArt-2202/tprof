@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 	scrollToAnchor();
 	scrollAnimateNodes({
-		node: '.top-section__list li',
+		node: '.top-section h1 + ul li',
 		animatedClass: 'slideInLeft',
 	});
 	videoLazyLoad();
