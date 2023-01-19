@@ -574,9 +574,10 @@
 	}
 }
 
-@media (max-width: 415px) {
+@media (max-width: 576px) {
 	.certificates__add {
 		flex-direction: column;
+		margin-bottom: 26px;
 	}
 
 	.certificates-slider__item .list-img {
@@ -861,6 +862,14 @@
 
 	.product-details__main {
 		order: 1;
+	}
+
+	.product-details__content {
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 
