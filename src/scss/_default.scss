@@ -126,6 +126,14 @@ h3 {
 	font-size: fsz(20, 12);
 }
 
+@media (max-width: 1024px) {
+
+	h1,
+	h2 {
+		margin-bottom: 29px;
+	}
+}
+
 @media (max-width: 576px) {
 
 	h1,
