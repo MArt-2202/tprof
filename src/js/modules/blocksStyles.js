@@ -19,22 +19,42 @@ export default function blockStyles() {
 		const logo = document.querySelector('header .container'),
 			lang = document.querySelector('.lang');
 
-		if (document.querySelector('.inner')) {
-			lang.style.left = `${logo.offsetLeft - lang.offsetWidth - 25}px`;
-			lang.style.top = '455px';
-			lang.classList.add('lang-style-1');
-		}
-		if (
-			document.querySelector('.index') &&
-			document.querySelector('.top-section .scroll-to-anchor')
-		) {
-			const btn = document.querySelector('.top-section .scroll-to-anchor');
+		if (window.matchMedia('(min-width: 1201px)').matches) {
+			if (document.querySelector('.inner')) {
+				lang.style.left = `${logo.offsetLeft - lang.offsetWidth - 25}px`;
+				lang.style.top = '455px';
+				lang.classList.add('lang-style-1');
+				lang.style.opacity = 1;
+			}
+			if (
+				document.querySelector('.index') &&
+				document.querySelector('.top-section .scroll-to-anchor')
+			) {
+				const btn = document.querySelector('.top-section .scroll-to-anchor');
 
-			lang.style.left = `${logo.offsetLeft - lang.offsetWidth}px`;
-			lang.style.top = `${btn.offsetTop}px`;
-			lang.classList.remove('lang-style-1');
+				lang.style.left = `${logo.offsetLeft - lang.offsetWidth}px`;
+				lang.style.top = `${btn.offsetTop}px`;
+				lang.classList.remove('lang-style-1');
+				lang.style.opacity = 1;
+			}
 		}
-		lang.style.opacity = 1;
+		if (window.matchMedia('(max-width: 1200px)').matches) {
+			if (document.querySelector('.inner')) {
+				lang.style.left = '';
+				lang.style.top = '';
+				lang.classList.remove('lang-style-1');
+				lang.style.opacity = '';
+			}
+			if (
+				document.querySelector('.index') &&
+				document.querySelector('.top-section .scroll-to-anchor')
+			) {
+				lang.style.left = '';
+				lang.style.top = '';
+				lang.classList.remove('lang-style-1');
+				lang.style.opacity = '';
+			}
+		}
 	}
 
 	if (
@@ -46,13 +66,13 @@ export default function blockStyles() {
 			breadcrumbs = document.querySelector('.breadcrumbs'),
 			title = document.querySelector('.breadcrumbs + h1');
 
-		if (window.matchMedia('(min-width: 1091px)').matches) {
+		if (window.matchMedia('(min-width: 1201px)').matches) {
 			breadcrumbs.style.marginLeft = `${nav.offsetLeft}px`;
 			breadcrumbs.style.opacity = 1;
 			title.style.marginLeft = `${nav.offsetLeft}px`;
 			title.style.opacity = 1;
 		}
-		if (window.matchMedia('(max-width: 1090px)').matches) {
+		if (window.matchMedia('(max-width: 1200px)').matches) {
 			breadcrumbs.style.marginLeft = '';
 			breadcrumbs.style.opacity = '';
 			title.style.marginLeft = '';
