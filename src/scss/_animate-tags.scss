@@ -1,9 +1,9 @@
-.top-section__list li {
+.top-section h1+ul li {
 	opacity: 0;
 }
 
 .desktop-user-agent {
-	.top-section__list li {
+	.top-section h1+ul li {
 		animation-duration: 0.55s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease-in-out;
@@ -11,7 +11,7 @@
 	}
 
 	@for $i from 1 through 5 {
-		.top-section__list {
+		.top-section h1+ul {
 			li:nth-child(#{$i}) {
 				animation-delay: $i * 0.15s;
 			}
@@ -20,7 +20,7 @@
 }
 
 .mobile-user-agent {
-	.top-section__list li {
+	.top-section h1+ul li {
 		opacity: 1;
 	}
 }
