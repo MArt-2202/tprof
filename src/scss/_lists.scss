@@ -58,3 +58,16 @@
 	grid-template-columns: 170px 1fr 286px;
 	gap: 16px;
 }
+
+@media (max-width: 640px) {
+	.list-4 {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 35px 20px;
+	}
+}
+
+@media (max-width: 360px) {
+	.list-4 {
+		gap: 35px 15px;
+	}
+}
