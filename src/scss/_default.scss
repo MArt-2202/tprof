@@ -35,7 +35,7 @@ main {
 
 @media (max-width: 1200px) {
 	main {
-		padding-top: 130px;
+		padding-top: 105px;
 	}
 }
 
@@ -143,6 +143,18 @@ h3 {
 
 	h3 {
 		font-size: fsz(18, 12);
+	}
+}
+
+@media (max-width: 415px) {
+
+	h1,
+	h2 {
+		font-size: fsz(23, 12);
+	}
+
+	h3 {
+		font-size: fsz(16, 12);
 	}
 }
 
