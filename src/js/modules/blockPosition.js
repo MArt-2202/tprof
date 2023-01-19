@@ -9,7 +9,11 @@ export default function blockPosition() {
 		bl7 = document.querySelector('main'),
 		bl8 = document.querySelector('.logo-mico'),
 		bl9 = document.querySelector('.footer__logo-company'),
-		bl10 = document.querySelector('.copyright');
+		bl10 = document.querySelector('.copyright'),
+		bl11 = document.querySelector('.product-details__aside'),
+		bl12 = document.querySelector('.product-details__main'),
+		bl13 = document.querySelector('.product-details h1'),
+		bl14 = document.querySelector('.product-details__info');
 
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
@@ -51,12 +55,18 @@ export default function blockPosition() {
 			document.body.classList.add('min-1025');
 
 			if (document.querySelector('.min-1025')) {
+				if (bl12 && bl13) {
+					bl12.prepend(bl13);
+				}
+				if (bl13 && bl14) {
+					bl13.after(bl14);
+				}
 			}
 		}
 	}
 
 	if (window.matchMedia('(min-width: 1201px)').matches) {
-		cument.body.classList.remove('max-360', 'max-576', 'max-768', 'max-1024', 'max-1200');
+		document.body.classList.remove('max-360', 'max-576', 'max-768', 'max-1024', 'max-1200');
 
 		if (!document.body.classList.contains('min-1201')) {
 			document.body.classList.add('min-1201');
@@ -116,6 +126,12 @@ export default function blockPosition() {
 
 			if (document.querySelector('.max-1024')) {
 				if (document.querySelector('.max-1024')) {
+					if (bl11 && bl13) {
+						bl11.prepend(bl13);
+					}
+					if (bl13 && bl14) {
+						bl13.after(bl14);
+					}
 				}
 			}
 		}
