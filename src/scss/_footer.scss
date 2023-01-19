@@ -12,13 +12,7 @@ footer {
 		margin-top: 11px;
 	}
 
-	.contacts-wrapper {
-		div {
-			&:not(:last-child) {
-				margin-right: 41px;
-			}
-		}
-	}
+
 }
 
 .logo-mico strong,
@@ -62,11 +56,23 @@ footer {
 }
 
 .copyright {
-	padding-left: 70px;
+
 	color: $c1;
 }
 
-@media (min-width: 1091px) {
+@media (min-width: 416px) {
+	footer {
+		.contacts-wrapper {
+			div {
+				&:not(:last-child) {
+					margin-right: 41px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1201px) {
 	footer {
 		position: relative;
 
@@ -116,10 +122,71 @@ footer {
 			}
 		}
 	}
+
+	.copyright {
+		padding-left: 70px;
+	}
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 1200px) {
 	footer {
+		clip-path: polygon(128px 0%, 100% 60px, 100% 100%, 0 100%, 0 30px);
 		background-color: $c4;
+		text-align: center;
+
+		.container {
+			padding-top: 60px;
+			padding-bottom: 60px;
+
+			>div+div {
+				margin-top: 28px;
+			}
+		}
+
+		.contacts-wrapper+.list-style-1 {
+			margin-top: 36px;
+		}
+
+		.list-style-1 {
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.footer__content {
+		>div+div {
+			margin-top: 37px;
+		}
+	}
+
+	.copyright {
+		display: none;
+	}
+
+	.logo-mico {
+		color: $c1;
+
+		strong {
+			text-align: left;
+			color: $c1;
+		}
+
+		&+.copyright {
+			display: block;
+			margin-top: 39px;
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	footer {
+		.contacts-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 17px 20px;
+		}
 	}
 }
