@@ -12,6 +12,7 @@ import videoLazyLoad from './modules/videoLazyLoad';
 import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 import lightbox from './modules/lightbox';
+import orderForm from './modules/orderForm';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		showEvent: 'mouseenter',
 		hideEvent: 'mouseleave',
 	});
+	orderForm();
 	scrollToAnchor();
 	scrollAnimateNodes({
 		node: '.top-section h1 + ul li',
@@ -51,22 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	tableWrapper();
 	toggleContent();
 
-	if (document.querySelector('#add-new-profile')) {
-		document.querySelector('#add-new-profile').addEventListener('click', () => {
-			if (document.querySelector('.order-form__content.dn')) {
-				document.querySelector('.order-form__content.dn').classList.remove('dn');
-
-				tooltip({
-					wrapper: 'data-tooltip',
-					tag: 'span',
-					tooltipButton: 'svg',
-					addClass: 'visible',
-					showEvent: 'mouseenter',
-					hideEvent: 'mouseleave',
-				});
-			}
-		});
-	}
 	lightbox({
 		container: '#product-lightbox',
 		selector: '.product-details-slider__item',
