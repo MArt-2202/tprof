@@ -12,13 +12,14 @@ export default function selectStyle() {
 					shouldSort: false,
 					callbackOnInit() {
 						el.classList.add('style-select-init');
-						input.value = select.querySelectorAll('option')[0].textContent;
+						input.value = select.querySelectorAll('option')[0].value;
 					},
 				});
 				select.addEventListener(
 					'choice',
 					function (e) {
-						input.value = e.detail.choice.label;
+						// input.value = e.detail.choice.label;
+						input.value = e.detail.choice.value;
 					},
 					false
 				);
