@@ -1,4 +1,5 @@
 import selectStyle from './selectStyle';
+import tooltip from './tooltip';
 
 export default function orderForm() {
 	if (document.querySelector('#add-new-profile')) {
@@ -26,6 +27,7 @@ export default function orderForm() {
 						`
 						);
 
+						tooltip();
 						selectStyle();
 					})
 					.catch((error) => {
