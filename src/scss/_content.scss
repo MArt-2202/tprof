@@ -681,10 +681,37 @@
 }
 
 .order-form__content {
+	position: relative;
 	margin-bottom: 38px;
 	padding: 24px;
 	background-color: $c7;
 	border: 1px solid rgba($c8, 0.5);
+}
+
+.order-form__delete-item {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	color: $cb;
+	cursor: pointer;
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 25px;
+		height: 25px;
+		fill: currentColor;
+		@include trs-all;
+	}
+
+	&:hover {
+		color: $c3;
+	}
 }
 
 .order-form__aside {
