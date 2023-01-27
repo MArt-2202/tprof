@@ -1,4 +1,9 @@
 <div class="order-form__content">
+	<button type="button" class="order-form__delete-item" data-id="1">
+		<svg>
+			<use href="img/sprite-svg-fill-delete.svg#close"></use>
+		</svg>
+	</button>
 	<div class="list-5">
 		<div>
 			<label for="order-form__profile-1">
@@ -34,7 +39,7 @@
 					<svg>
 						<use href="img/sprite-svg-fill-delete.svg#info"></use>
 					</svg>
-					<input id="order-form__height-1" class="order-form__number">
+					<input id="order-form__height-1" class="order-form__number" required>
 				</div>
 			</div>
 		</div>
@@ -63,7 +68,7 @@
 		<div>
 			<div class="order-form__add">
 				<label for="order-form__length-1">Довжина, пог. м.</label>
-				<input id="order-form__length-1" class="order-form__number">
+				<input id="order-form__length-1" class="order-form__number" required>
 			</div>
 		</div>
 		<div>
