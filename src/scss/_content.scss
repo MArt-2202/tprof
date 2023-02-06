@@ -622,7 +622,7 @@
 		}
 	}
 
-	.list-5+.list-6 {
+	.list-5+.list-5 {
 		margin-top: 30px;
 	}
 
@@ -732,9 +732,21 @@
 	flex-grow: 1;
 
 	label {
-		strong {
+
+		strong,
+		span {
 			display: block;
 			text-align: right;
+		}
+	}
+}
+
+@media (min-width: 416px) {
+	.order-form__main {
+		label {
+			span {
+				font-size: fsz(10, 12);
+			}
 		}
 	}
 }
@@ -831,7 +843,8 @@
 	}
 
 	.order-form__aside label,
-	.order-form__main label strong {
+	.order-form__main label strong,
+	.order-form__main label span {
 		text-align: left;
 	}
 }
