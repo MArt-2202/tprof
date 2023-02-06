@@ -4,7 +4,8 @@
 .list-4,
 .list-5,
 .list-6,
-.list-7 {
+.list-7,
+.list-8 {
 	display: grid;
 }
 
@@ -30,8 +31,12 @@
 	}
 }
 
-.list-4 {
+.list-4,
+.list-8 {
 	grid-template-columns: repeat(3, 1fr);
+}
+
+.list-4 {
 	gap: 50px 24px;
 }
 
@@ -57,6 +62,10 @@
 .list-7 {
 	grid-template-columns: 170px 1fr 286px;
 	gap: 16px;
+}
+
+.list-8 {
+	gap: 24px;
 }
 
 @media (max-width: 1024px) {
@@ -96,7 +105,8 @@
 
 	.list-1,
 	.list-2,
-	.list-4 {
+	.list-4,
+	.list-8 {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
@@ -128,6 +138,10 @@
 				grid-column: 1/-1;
 			}
 		}
+	}
+
+	.list-8 {
+		gap: 20px;
 	}
 }
 
@@ -189,5 +203,9 @@
 				grid-row: 3/span 1;
 			}
 		}
+	}
+
+	.list-8 {
+		gap: 15px;
 	}
 }
