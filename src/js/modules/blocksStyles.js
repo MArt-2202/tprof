@@ -5,12 +5,17 @@ export default function blockStyles() {
 		document.body.classList.add('inner');
 	}
 
-	if (document.querySelector('.order-form .list-6')) {
-		document.querySelector('.order-form .list-6').addEventListener('input', function (e) {
+	if (document.querySelector('.order-form')) {
+		document.querySelector('.order-form').addEventListener('input', function (e) {
 			const target = e.target;
 
 			if (target.tagName === 'INPUT' && target.classList.contains('order-form__number')) {
-				target.value = e.target.value.replace(/\D/g, '');
+				target.value = e.target.value.replace(
+					/[a-zA-Zа-яА-ЯёЁ\*\+\`\'\"\~\-\/\\\|\s\!\?\=\_]/g,
+					''
+				);
+				target.value = e.target.value.replace(/[\,]{1,}/g, ',');
+				target.value = e.target.value.replace(/[\.]{1,}/g, '.');
 			}
 		});
 	}
