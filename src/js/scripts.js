@@ -71,6 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		download: false,
 		mode: 'lg-fade',
 	});
+	lightbox({
+		container: '#gallery-lightbox',
+		selector: '.gallery__item',
+		plugins: [lgZoom],
+		speed: 500,
+		zoom: true,
+		download: false,
+		mode: 'lg-fade',
+	});
 }); // END READY
 
 window.addEventListener('resize', () => {
